@@ -1,0 +1,241 @@
+/* =========================================
+   PÁGINA DE POLÍTICA DE COOKIES
+   ========================================= */
+
+.contenido-legal {
+    width: 100%;
+    max-width: 980px;
+    margin: 0 auto;
+    padding: 48px 32px 120px;
+}
+
+/* =========================================
+   INTRODUCCIÓN EDITORIAL
+   ========================================= */
+
+.legal-introduccion {
+    margin-bottom: 56px;
+    padding-bottom: 36px;
+    border-bottom: var(--borde-fino);
+}
+
+.legal-introduccion__metadatos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: var(--borde-fino);
+}
+
+.texto-editorial {
+    color: rgba(48, 43, 53, 0.72);
+    font-family: var(--fuente-tecnica);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.legal-ceja {
+    margin: 0 0 12px;
+    color: var(--color-violeta);
+    font-family: var(--fuente-tecnica);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.legal-titulo {
+    margin: 0 0 22px;
+    color: var(--color-tinta);
+    font-family: var(--fuente-editorial);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+.legal-titulo em {
+    color: var(--color-violeta);
+    font-style: italic;
+}
+
+.legal-resumen {
+    max-width: 720px;
+    margin: 0 0 26px;
+    color: rgba(48, 43, 53, 0.9);
+    font-family: var(--fuente-principal);
+    font-size: 1.12rem;
+    line-height: 1.72;
+}
+
+.legal-actualizacion {
+    display: inline-block;
+    margin: 0;
+    padding: 6px 14px;
+    border-radius: var(--radio-contenedor);
+    background-color: rgba(200, 184, 232, 0.32);
+    color: var(--color-violeta);
+    font-family: var(--fuente-tecnica);
+    font-size: 0.8rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
+
+/* =========================================
+   APARTADOS LEGALES NUMERADOS
+   ========================================= */
+
+.documento-legal {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.apartado-legal {
+    display: grid;
+    grid-template-columns: 72px 1fr;
+    gap: 24px;
+    align-items: start;
+    padding-bottom: 40px;
+    border-bottom: var(--borde-fino);
+}
+
+.apartado-legal:last-child {
+    padding-bottom: 0;
+    border-bottom: 0;
+}
+
+.apartado-legal__numero {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border: var(--borde-fino);
+    border-radius: 50%;
+    background-color: rgba(200, 184, 232, 0.25);
+    color: var(--color-violeta);
+    font-family: var(--fuente-tecnica);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.apartado-legal__contenido h2 {
+    margin: 6px 0 16px;
+    color: var(--color-tinta);
+    font-family: var(--fuente-editorial);
+    font-size: clamp(1.45rem, 2.5vw, 1.85rem);
+    font-weight: 400;
+    line-height: 1.25;
+    letter-spacing: -0.02em;
+}
+
+.apartado-legal__contenido p {
+    margin: 0 0 16px;
+    color: rgba(48, 43, 53, 0.9);
+    font-family: var(--fuente-principal);
+    font-size: 1.02rem;
+    line-height: 1.78;
+}
+
+.apartado-legal__contenido p:last-child {
+    margin-bottom: 0;
+}
+
+/* Listas destacadas con estilo de tarjeta editorial */
+.apartado-legal__contenido ul {
+    margin: 20px 0;
+    padding: 22px 26px;
+    border: var(--borde-fino);
+    border-radius: 20px;
+    background-color: rgba(255, 252, 249, 0.65);
+    list-style: none;
+}
+
+.apartado-legal__contenido li {
+    position: relative;
+    margin-bottom: 10px;
+    padding-left: 22px;
+    color: rgba(48, 43, 53, 0.92);
+    font-size: 0.98rem;
+    line-height: 1.65;
+}
+
+.apartado-legal__contenido li:last-child {
+    margin-bottom: 0;
+}
+
+.apartado-legal__contenido li::before {
+    position: absolute;
+    top: 0;
+    left: 0;
+    color: var(--color-violeta);
+    font-size: 0.9rem;
+    content: "✦";
+}
+
+.apartado-legal__contenido strong {
+    color: var(--color-tinta);
+    font-weight: 700;
+}
+
+/* Enlaces dentro de los apartados */
+.apartado-legal__contenido a {
+    color: var(--color-violeta);
+    font-weight: 600;
+    text-decoration: underline;
+    text-decoration-color: rgba(128, 101, 168, 0.45);
+    text-underline-offset: 4px;
+    transition:
+        color var(--transicion),
+        text-decoration-color var(--transicion);
+}
+
+.apartado-legal__contenido a:hover {
+    color: var(--color-tinta);
+    text-decoration-color: var(--color-tinta);
+}
+
+/* =========================================
+   ADAPTACIÓN RESPONSIVE (MÓVIL Y TABLET)
+   ========================================= */
+
+@media (max-width: 768px) {
+    .contenido-legal {
+        padding: 28px 20px 80px;
+    }
+
+    .legal-introduccion {
+        margin-bottom: 40px;
+        padding-bottom: 28px;
+    }
+
+    .documento-legal {
+        gap: 32px;
+    }
+
+    .apartado-legal {
+        grid-template-columns: 1fr;
+        gap: 14px;
+        padding-bottom: 32px;
+    }
+
+    .apartado-legal__numero {
+        width: 40px;
+        height: 40px;
+        font-size: 0.82rem;
+    }
+
+    .apartado-legal__contenido h2 {
+        margin-top: 0;
+    }
+
+    .apartado-legal__contenido ul {
+        padding: 18px 20px;
+        border-radius: 16px;
+    }
+}

@@ -1,0 +1,331 @@
+/* =========================================
+   PÁGINA DE BLOG
+   ========================================= */
+
+.contenido-blog {
+    width: 100%;
+    max-width: 1080px;
+    margin: 0 auto;
+    padding: 48px 32px 120px;
+}
+
+/* =========================================
+   INTRODUCCIÓN EDITORIAL Y FILTROS
+   ========================================= */
+
+.blog-introduccion {
+    margin-bottom: 52px;
+    padding-bottom: 36px;
+    border-bottom: var(--borde-fino);
+}
+
+.blog-introduccion__metadatos {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    margin-bottom: 24px;
+    padding-bottom: 14px;
+    border-bottom: var(--borde-fino);
+}
+
+.texto-editorial {
+    color: rgba(48, 43, 53, 0.72);
+    font-family: var(--fuente-tecnica);
+    font-size: 0.78rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.blog-ceja {
+    margin: 0 0 12px;
+    color: var(--color-violeta);
+    font-family: var(--fuente-tecnica);
+    font-size: 0.82rem;
+    font-weight: 500;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.blog-titulo {
+    margin: 0 0 22px;
+    color: var(--color-tinta);
+    font-family: var(--fuente-editorial);
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.03em;
+}
+
+.blog-titulo em {
+    color: var(--color-violeta);
+    font-style: italic;
+}
+
+.blog-resumen {
+    max-width: 720px;
+    margin: 0 0 32px;
+    color: rgba(48, 43, 53, 0.9);
+    font-family: var(--fuente-principal);
+    font-size: 1.12rem;
+    line-height: 1.72;
+}
+
+/* Botones de filtro */
+.blog-filtros {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.blog-filtro {
+    padding: 9px 18px;
+    border: var(--borde-fino);
+    border-radius: var(--radio-contenedor);
+    background-color: transparent;
+    color: var(--color-tinta);
+    font-family: var(--fuente-tecnica);
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition:
+        background-color var(--transicion),
+        color var(--transicion),
+        border-color var(--transicion);
+}
+
+.blog-filtro:hover {
+    border-color: var(--color-violeta);
+    background-color: rgba(200, 184, 232, 0.28);
+}
+
+.blog-filtro--activo {
+    border-color: var(--color-tinta);
+    background-color: var(--color-tinta);
+    color: var(--color-marfil);
+}
+
+.blog-filtro--activo:hover {
+    border-color: var(--color-violeta);
+    background-color: var(--color-violeta);
+    color: #FFFFFF;
+}
+
+/* =========================================
+   ETIQUETAS Y METADATOS DE ARTÍCULOS
+   ========================================= */
+
+.articulo-etiqueta {
+    display: inline-block;
+    padding: 4px 12px;
+    border: var(--borde-fino);
+    border-radius: var(--radio-contenedor);
+    background-color: rgba(200, 184, 232, 0.24);
+    color: var(--color-violeta);
+    font-family: var(--fuente-tecnica);
+    font-size: 0.74rem;
+    font-weight: 500;
+    letter-spacing: 0.04em;
+}
+
+.articulo-etiqueta--destacada {
+    border-color: rgba(169, 201, 187, 0.8);
+    background-color: rgba(169, 201, 187, 0.45);
+    color: var(--color-tinta);
+}
+
+.articulo-fecha {
+    color: rgba(48, 43, 53, 0.68);
+    font-family: var(--fuente-tecnica);
+    font-size: 0.76rem;
+    letter-spacing: 0.04em;
+}
+
+.articulo-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    color: rgba(48, 43, 53, 0.68);
+    font-family: var(--fuente-tecnica);
+    font-size: 0.78rem;
+}
+
+.articulo-enlace {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    color: var(--color-violeta);
+    font-family: var(--fuente-tecnica);
+    font-size: 0.85rem;
+    font-weight: 500;
+    transition:
+        color var(--transicion),
+        transform var(--transicion);
+}
+
+.articulo-enlace:hover {
+    color: var(--color-tinta);
+    transform: translateX(3px);
+}
+
+/* =========================================
+   ARTÍCULO DESTACADO
+   ========================================= */
+
+.articulo-destacado {
+    margin-bottom: 44px;
+    padding: 36px 40px;
+    border: var(--borde-fino);
+    border-radius: 26px;
+    background-color: rgba(255, 252, 249, 0.72);
+    transition:
+        transform var(--transicion),
+        border-color var(--transicion);
+}
+
+.articulo-destacado:hover {
+    border-color: var(--color-violeta);
+    transform: translateY(-2px);
+}
+
+.articulo-destacado__etiquetas {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.articulo-destacado__titulo {
+    margin: 0 0 16px;
+    color: var(--color-tinta);
+    font-family: var(--fuente-editorial);
+    font-size: clamp(1.75rem, 3vw, 2.4rem);
+    font-weight: 400;
+    line-height: 1.18;
+    letter-spacing: -0.02em;
+}
+
+.articulo-destacado__titulo a:hover {
+    color: var(--color-violeta);
+}
+
+.articulo-destacado__extracto {
+    max-width: 780px;
+    margin: 0 0 26px;
+    color: rgba(48, 43, 53, 0.88);
+    font-size: 1.05rem;
+    line-height: 1.72;
+}
+
+.articulo-destacado__pie {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+    padding-top: 20px;
+    border-top: var(--borde-fino);
+}
+
+/* =========================================
+   CUADRÍCULA DE ARTÍCULOS
+   ========================================= */
+
+.blog-cuadricula {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+}
+
+.tarjeta-articulo {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+    border: var(--borde-fino);
+    border-radius: 22px;
+    background-color: rgba(255, 252, 249, 0.58);
+    transition:
+        transform var(--transicion),
+        border-color var(--transicion),
+        background-color var(--transicion);
+}
+
+.tarjeta-articulo:hover {
+    border-color: var(--color-violeta);
+    background-color: rgba(255, 252, 249, 0.9);
+    transform: translateY(-3px);
+}
+
+.tarjeta-articulo__superior {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    margin-bottom: 18px;
+}
+
+.tarjeta-articulo__titulo {
+    margin: 0 0 12px;
+    color: var(--color-tinta);
+    font-family: var(--fuente-editorial);
+    font-size: clamp(1.35rem, 2vw, 1.65rem);
+    font-weight: 400;
+    line-height: 1.24;
+    letter-spacing: -0.02em;
+}
+
+.tarjeta-articulo__titulo a:hover {
+    color: var(--color-violeta);
+}
+
+.tarjeta-articulo__extracto {
+    margin: 0 0 24px;
+    color: rgba(48, 43, 53, 0.86);
+    font-size: 0.97rem;
+    line-height: 1.68;
+}
+
+.tarjeta-articulo__pie {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-top: auto;
+    padding-top: 16px;
+    border-top: var(--borde-fino);
+}
+
+/* =========================================
+   ADAPTACIÓN RESPONSIVE (MÓVIL Y TABLET)
+   ========================================= */
+
+@media (max-width: 860px) {
+    .blog-cuadricula {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 768px) {
+    .contenido-blog {
+        padding: 28px 20px 80px;
+    }
+
+    .blog-introduccion {
+        margin-bottom: 36px;
+        padding-bottom: 28px;
+    }
+
+    .articulo-destacado {
+        padding: 24px 22px;
+        border-radius: 20px;
+    }
+
+    .tarjeta-articulo {
+        padding: 24px 20px;
+        border-radius: 18px;
+    }
+}
